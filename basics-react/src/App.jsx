@@ -5,6 +5,7 @@ import Items from './components/Items'
 import { doctorsData } from './data/doctorData'
 import To_DoList from './components/To_DoList'
 import TabList from './components/TabList'
+import Pagination from './components/pagination/Pagination'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
       {/* <Items  /> */}
       <To_DoList/>
       <TabList/>
+      <Pagination/>
     </div>
   )
 }
