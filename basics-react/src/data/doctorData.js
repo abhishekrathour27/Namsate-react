@@ -110,3 +110,5 @@ export const doctorsData = [
     fee: 100,
   },
 ];
+
+//https://dummyjson.com/products?limit=500

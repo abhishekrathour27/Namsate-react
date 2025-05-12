@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Products({image , title}) {
   return (
-    <div className='border w-[250px] m-5 bg-indigo-500 text-white p-3'>
-       <img src={image} alt={title} className='w-[200px]'/>
+    <div className='w-[200px] border m-2 p-3 bg-slate-300'>
+        <img src={image} alt={title} />
         <span>{title}</span>
     </div>
   )
