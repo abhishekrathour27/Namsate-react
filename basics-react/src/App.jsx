@@ -6,6 +6,7 @@ import { doctorsData } from './data/doctorData'
 import To_DoList from './components/To_DoList'
 import TabList from './components/TabList'
 import Pagination from './components/pagination/Pagination'
+import ProgressBar from './components/ProgressBar'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +19,7 @@ function App() {
       <To_DoList/>
       <TabList/>
       <Pagination/>
+      <ProgressBar/>
     </div>
   )
 }
