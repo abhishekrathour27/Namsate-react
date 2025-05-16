@@ -22,7 +22,6 @@ export default function Pagination() {
 
     const PAGE_SIZE = 10;
     const pageNo = products.length / PAGE_SIZE;
-
     const start = page * pageNo;
     const end = start + pageNo;
 
