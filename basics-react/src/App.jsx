@@ -16,10 +16,10 @@ function App() {
     <div>
       <Navbar />
       {/* <Items  /> */}
-      {/* <To_DoList/> */}
-      {/* <TabList/> */}
+      <To_DoList/>
+      <TabList/>
       <Pagination/>
-      {/* <ProgressBar/> */}
+      <ProgressBar/>
     </div>
   )
 }
