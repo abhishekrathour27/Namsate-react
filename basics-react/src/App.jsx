@@ -8,6 +8,7 @@ import TabList from './components/TabList'
 import Pagination from './components/pagination/Pagination'
 import ProgressBar from './components/ProgressBar'
 import Accordian from './components/Accordian'
+import Chips from './components/Chips'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ function App() {
       <Pagination/>
       <ProgressBar/> */}
       <Accordian />
+      <Chips/>
     </div>
   )
 }
