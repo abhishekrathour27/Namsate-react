@@ -18,20 +18,20 @@ export default function To_DoList() {
       list.map((item) => {
         if (item.id === id) {
           return {
-            ...item ,
-            check : !item.check
+            ...item,
+            check: !item.check
           }
         }
-        else{
+        else {
           return item;
         }
       })
     )
   }
-  const toggleDel = (id)=>{
-     setList(
-       list.filter((item)=> item.id !== id)
-     )
+  const toggleDel = (id) => {
+    setList(
+      list.filter((item) => item.id !== id)
+    )
   }
 
   return (
@@ -44,8 +44,8 @@ export default function To_DoList() {
         {
           list.map((item) => <li key={item.id} className='space-x-2'>
             <input type="checkbox" checked={item.check} onChange={() => toggleCheck(item.id)} />
-            <span className={`${item.check ? 'line-through': ''}`}>{item.name}</span>
-            <button onClick={()=> toggleDel(item.id)}
+            <span className={`${item.check ? 'line-through' : ''}`}>{item.name}</span>
+            <button onClick={() => toggleDel(item.id)}
               className='border'>del</button>
           </li>)
         }

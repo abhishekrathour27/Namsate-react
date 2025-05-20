@@ -4,7 +4,7 @@ const ProgressBarCompo = ({ progress }) => {
     return (
         <div>
             <div className='border w-2/3 rounded-xl overflow-hidden'>
-                <div className={`${progress <= 30 ? 'bg-red-500' : progress > 30 && progress < 70 ? 'bg-orange-400' : 'bg-green-500'} h-8 `} style={{width : `${progress}%`}} ></div>
+                <div className={`${progress <= 30 ? 'bg-red-500' : progress > 30 && progress < 70 ? 'bg-orange-400' : 'bg-green-500'} h-8 `} style={{ width: `${progress}%` }} ></div>
             </div>
         </div>
     )
