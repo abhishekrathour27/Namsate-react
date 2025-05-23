@@ -12,6 +12,8 @@ import Chips from './components/Chips'
 import GuessNum from './components/GuessNum'
 import ToolTip from './components/ToolTip'
 import Validation from './components/Validation'
+import UseEffect from './components/hooks/UseEffect'
+import UnMount from './components/hooks/UnMount'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,11 +27,13 @@ function App() {
       <TabList/>
       <Pagination/>
       <ProgressBar/> */}
-      <Accordian />
+      {/* <Accordian />
       <Chips/>
       <GuessNum/>
       <ToolTip/>
-      <Validation/>
+      <Validation/> */}
+      {/* <UseEffect/> */}
+      {/* <UnMount/> */}
     </div>
   )
 }
