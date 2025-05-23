@@ -11,6 +11,7 @@ import Accordian from './components/Accordian'
 import Chips from './components/Chips'
 import GuessNum from './components/GuessNum'
 import ToolTip from './components/ToolTip'
+import Validation from './components/Validation'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,10 +25,11 @@ function App() {
       <TabList/>
       <Pagination/>
       <ProgressBar/> */}
-      {/* <Accordian />
+      <Accordian />
       <Chips/>
-      <GuessNum/> */}
+      <GuessNum/>
       <ToolTip/>
+      <Validation/>
     </div>
   )
 }

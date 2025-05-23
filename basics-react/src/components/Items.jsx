@@ -2,10 +2,6 @@ import React from 'react'
 import { doctorsData } from '../data/doctorData'
 
 export default function Items({ itemInfo }) {
-
-
-
-
     return (
         <div className='grid grid-cols-6 '>
             {doctorsData.map((d, index) => (
