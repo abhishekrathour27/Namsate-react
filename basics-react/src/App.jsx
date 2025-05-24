@@ -12,8 +12,8 @@ import Chips from './components/Chips'
 import GuessNum from './components/GuessNum'
 import ToolTip from './components/ToolTip'
 import Validation from './components/Validation'
-import UseEffect from './components/hooks/UseEffect'
-import UnMount from './components/hooks/UnMount'
+import UseEffect from './components/hooks/useEffect/UseEffect'
+import UnMount from './components/hooks/useEffect/UnMount'
 
 function App() {
   const [count, setCount] = useState(0)
