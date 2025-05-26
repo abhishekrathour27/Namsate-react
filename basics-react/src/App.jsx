@@ -32,8 +32,8 @@ function App() {
       <GuessNum/>
       <ToolTip/>
       <Validation/> */}
-      {/* <UseEffect/> */}
-      {/* <UnMount/> */}
+      <UseEffect/> 
+       <UnMount/>
     </div>
   )
 }
