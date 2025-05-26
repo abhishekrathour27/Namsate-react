@@ -11,23 +11,19 @@ export default function ToolTip() {
   ];
 
   return (
-    <div className="tooltip-container flex gap-10 m-10">
-      {icons.map((icon, index) => (
-        <div
-          onMouseEnter={() => setIconIndex(index)}
-          onMouseLeave={() => setIconIndex(null)}
-          key={index}
-          className="tooltip-item relative"
+    <div className="tooltip-container flex gap-20 m-10">
+      {
+        icons.map((i, index) => <div key={index}
+          onMouseEnter={()=> setIconIndex(index)}
+          onMouseLeave={()=> setIconIndex(null)}
+          className='relative'
         >
-          <span className='cursor-pointer text-2xl'>{icon.emoji}</span>
+          <span className='cursor-pointer text-xl  '>{i.emoji}</span>
           {
-            iconIndex === index && <div className='absolute -top-8 -left-3 bg-gray-800 text-white w-fit py-1 px-3 rounded-xl'>
-              {icon.label}
-            </div>
+            iconIndex === index && <div className='bg-black text-white absolute -top-8 rounded-sm px-2 py-0.5 -left-2 '>{i.label}</div>
           }
-
-        </div>
-      ))}
+        </div>)
+      }
     </div>
   );
 

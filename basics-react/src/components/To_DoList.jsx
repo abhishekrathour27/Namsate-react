@@ -1,55 +1,59 @@
 import React, { useState } from 'react'
 
 export default function To_DoList() {
-  const [input, setInput] = useState('')
-  const [list, setList] = useState([]);
+  const [input, setInput] = useState('');
+  const [todo, setTodo] = useState([]);
 
-  const addToList = () => {
+
+  const toggleToDo = () => {
     const data = {
-      id: list.length,
+      id: input.length,
       name: input,
       check: false
     }
-    setList([...list, data])
+    setTodo([...todo, data])
     setInput('')
+
   }
-  const toggleCheck = (id) => {
-    setList(
-      list.map((item) => {
-        if (item.id === id) {
+  const toggleCheckBox = (id) => {
+    setTodo(
+      todo.map((i) => {
+
+        if (i.id === id) {
           return {
-            ...item,
-            check: !item.check
+            ...i, check: !i.check
           }
         }
         else {
-          return item;
+          return i;
         }
+
       })
     )
   }
-  const toggleDel = (id) => {
-    setList(
-      list.filter((item) => item.id !== id)
+  const toggelDel = (id) => {
+    setTodo(
+      todo.filter((i) => id !== i.id)
     )
   }
 
+
   return (
-    <div className='m-5'>
-      <div className='space-x-2'>
-        <input type="text" value={input} className='border ' onChange={(e) => setInput(e.target.value)} />
-        <button onClick={() => addToList()} className='border'>ADD</button>
-      </div>
-      <ul className='mt-5'>
+    <div className='m-5 space-x-1'>
+      <input type="text" className='border p-1' value={input} onChange={(e) => setInput(e.target.value)} />
+      <button onClick={toggleToDo}
+        className='border p-1 cursor-pointer'>Add</button>
+
+      <div>
         {
-          list.map((item) => <li key={item.id} className='space-x-2'>
-            <input type="checkbox" checked={item.check} onChange={() => toggleCheck(item.id)} />
-            <span className={`${item.check ? 'line-through' : ''}`}>{item.name}</span>
-            <button onClick={() => toggleDel(item.id)}
-              className='border'>del</button>
-          </li>)
+          todo.map((i, id) => <div className='m-5 space-x-2 ' key={id}>
+            <input type="checkbox" checked={i.check} onChange={() => toggleCheckBox(i.id)} />
+            <span className={`${i.check ? 'line-through' : ''}`}>{i.name}</span>
+            <button onClick={() => toggelDel(i.id)}
+              className='border px-2  h-fit cursor-pointer'>X</button>
+          </div>)
         }
-      </ul>
+      </div>
     </div>
   )
 }

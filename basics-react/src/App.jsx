@@ -23,17 +23,17 @@ function App() {
     <div>
       <Navbar />
       {/* <Items  /> */}
-      {/* <To_DoList/>
-      <TabList/>
-      <Pagination/>
-      <ProgressBar/> */}
+      {/* <To_DoList/> */}
+      {/* <TabList/>
+      <Pagination/> */}
+      <ProgressBar/>
       {/* <Accordian />
       <Chips/>
-      <GuessNum/>
-      <ToolTip/>
-      <Validation/> */}
+      <GuessNum/> */}
+      {/* <ToolTip/> */}
+      {/* <Validation/>
       <UseEffect/> 
-       <UnMount/>
+       <UnMount/> */}
     </div>
   )
 }
