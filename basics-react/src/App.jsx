@@ -26,7 +26,7 @@ function App() {
       {/* <To_DoList/> */}
       {/* <TabList/>
       <Pagination/> */}
-      <ProgressBar/>
+      {/* <ProgressBar/> */}
       {/* <Accordian />
       <Chips/>
       <GuessNum/> */}
