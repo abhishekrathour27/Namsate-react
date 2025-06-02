@@ -12,8 +12,9 @@ import Chips from './components/Chips'
 import GuessNum from './components/GuessNum'
 import ToolTip from './components/ToolTip'
 import Validation from './components/Validation'
-import UseEffect from './components/hooks/useEffect/UseEffect'
-import UnMount from './components/hooks/useEffect/UnMount'
+import PersistValue from './components/useRef/Ref'
+import TimerRef from './components/useRef/TimerRef'
+import Form from './components/Form'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,19 +22,22 @@ function App() {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       {/* <Items  /> */}
       {/* <To_DoList/> */}
       {/* <TabList/>
       <Pagination/> */}
       {/* <ProgressBar/> */}
-      {/* <Accordian />
-      <Chips/>
+      {/* <Accordian /> */}
+      {/* <Chips/>
       <GuessNum/> */}
       {/* <ToolTip/> */}
       {/* <Validation/>
       <UseEffect/> 
        <UnMount/> */}
+      {/* <PersistValue /> */}
+      {/* <TimerRef/> */}
+      <Form/>
     </div>
   )
 }
