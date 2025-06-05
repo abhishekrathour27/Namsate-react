@@ -15,9 +15,10 @@ import Validation from './components/Validation'
 import PersistValue from './components/useRef/Ref'
 import TimerRef from './components/useRef/TimerRef'
 import Form from './components/Form'
+import DarkMode from './components/DarkMode'
+import Slider from './components/Slider'
 
 function App() {
-  const [count, setCount] = useState(0)
 
 
   return (
@@ -25,19 +26,21 @@ function App() {
       {/* <Navbar /> */}
       {/* <Items  /> */}
       {/* <To_DoList/> */}
-      {/* <TabList/>
-      <Pagination/> */}
+      {/* <TabList/> */}
+      {/* <Pagination/> */}
       {/* <ProgressBar/> */}
       {/* <Accordian /> */}
-      {/* <Chips/>
-      <GuessNum/> */}
+      {/* <Chips/> */}
+      {/* <GuessNum/> */}
       {/* <ToolTip/> */}
-      {/* <Validation/>
-      <UseEffect/> 
-       <UnMount/> */}
+      {/* <Validation/> */}
+      {/* <UseEffect/>  */}
+      {/* <UnMount/> */}
       {/* <PersistValue /> */}
       {/* <TimerRef/> */}
-      <Form/>
+      {/* <Form /> */}
+      {/* <DarkMode/> */}
+      <Slider />
     </div>
   )
 }
