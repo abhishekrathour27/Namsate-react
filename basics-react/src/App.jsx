@@ -16,7 +16,9 @@ import PersistValue from './components/useRef/Ref'
 import TimerRef from './components/useRef/TimerRef'
 import Form from './components/Form'
 import DarkMode from './components/DarkMode'
-import Slider from './components/Slider'
+import SideBar from './components/SideBar'
+import NewTodo from './components/NewTodo'
+import ValidationTab from './components/ValidationTab/ValidationTab'
 
 function App() {
 
@@ -40,7 +42,10 @@ function App() {
       {/* <TimerRef/> */}
       {/* <Form /> */}
       {/* <DarkMode/> */}
-      <Slider />
+      {/* <SideBar /> */}
+      {/* <NewTodo/> */}
+      <ValidationTab/>
+
     </div>
   )
 }

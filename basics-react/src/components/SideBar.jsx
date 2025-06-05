@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function Slider() {
+export default function SideBar() {
   const [show, setShow] = useState(false);
 
 
