@@ -19,6 +19,9 @@ import DarkMode from './components/DarkMode'
 import SideBar from './components/SideBar'
 import NewTodo from './components/NewTodo'
 import ValidationTab from './components/ValidationTab/ValidationTab'
+import BlogPost from './components/BlogPost/BlogPost'
+import NameCard from './components/CartoonData/NameCard'
+import ImgLink from './components/ImgLink'
 
 function App() {
 
@@ -44,8 +47,10 @@ function App() {
       {/* <DarkMode/> */}
       {/* <SideBar /> */}
       {/* <NewTodo/> */}
-      <ValidationTab/>
-
+      {/* <ValidationTab/> */}
+      {/* <BlogPost/> */}
+      {/* <NameCard/> */}
+      <ImgLink />
     </div>
   )
 }
