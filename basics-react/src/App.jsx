@@ -22,6 +22,11 @@ import ValidationTab from './components/ValidationTab/ValidationTab'
 import BlogPost from './components/BlogPost/BlogPost'
 import NameCard from './components/CartoonData/NameCard'
 import ImgLink from './components/ImgLink'
+import ReUsable from './components/ReUsable'
+import COunter from './components/COunter'
+import Home from './components/Cart/Home'
+import { Route, Routes } from 'react-router'
+import Cart from './components/Cart/Cart'
 
 function App() {
 
@@ -46,11 +51,18 @@ function App() {
       {/* <Form /> */}
       {/* <DarkMode/> */}
       {/* <SideBar /> */}
-      {/* <NewTodo/> */}
+      <NewTodo/>
       {/* <ValidationTab/> */}
       {/* <BlogPost/> */}
       {/* <NameCard/> */}
-      <ImgLink />
+      {/* <ImgLink /> */}
+      {/* <ReUsable /> */}
+      {/* <COunter /> */}
+      {/* <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes> */}
+
     </div>
   )
 }

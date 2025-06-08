@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 
 export default function NewTodo() {
-
     const [input, setInput] = useState('');
     const [todo, setTodo] = useState([]);
 
-    const toggelAdd = () => {
+    const handleBtn = () => {
         const data = {
             id: todo.length,
             name: input,
             check: false
         }
-        setTodo([...todo, data]);
-        setInput('')
+        input ? setTodo(prev => [...prev, data]) : ''
+        setInput('');
+
     }
     const handleCheck = (id) => {
         setTodo(
@@ -23,36 +23,33 @@ export default function NewTodo() {
                     }
                 }
                 else {
-                    return item;
+                    return item
                 }
             })
         )
     }
-    const handleDel = (id) => {
+    const handleDelete = (id) => {
         setTodo(
-            todo.filter((item) => item.id !== id)
+            todo.filter((item) => id !== item.id)
         )
     }
 
     return (
-        <div className='m-5'>
-            <h1>Todo list</h1>
+        <div className='m-10'>
+            <input type="text" placeholder='Enter name' value={input}
+                onChange={(e) => setInput(e.target.value)}
+                className='border rounded-lg h-7 px-3' />
+            <button onClick={handleBtn}
+                className='border px-2 py-1 bg-indigo-500 text-white rounded-xl ml-2 cursor-pointer'>Add</button>
             <div>
-                <input type="text" placeholder='Enter todo' className='border p-1'
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)} />
-                <button onClick={toggelAdd}
-                    className='border p-1'>Add</button>
-                <div >
-                    {
-                        todo.map((item, id) => <ul key={item.id} className='mt-2 space-x-1'>
-                            <input type="checkbox" checked={item.check} onChange={() => handleCheck(item.id)} />
-                            <span className={`${item.check ? 'line-through' : ''}`}>{item.name}</span>
-                            <button onClick={() => handleDel(item.id)}
-                                className='border'>X</button>
-                        </ul>)
-                    }
-                </div>
+                {
+                    todo.map((item) => <div key={item.id} className='space-x-3 mt-1'>
+                        <input type="checkbox" checked={item.check} onChange={() => handleCheck(item.id)} />
+                        <span className={`${item.check ? 'line-through text-red-500' : 'text-green-500'}`}>{item.name}</span>
+                        <button onClick={() => handleDelete(item.id)}
+                            className='border px-2 py-1 bg-indigo-500 text-white rounded-xl ml-2 cursor-pointer'>Delete</button>
+                    </div>)
+                }
             </div>
         </div>
     )
